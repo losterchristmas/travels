@@ -18,7 +18,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus">
-@import '~@/assets/css/iconfont/varible.styl';
+@import '~__css__/iconfont/varible.styl';
     .header
       font-size:.9rem
       display:flex
