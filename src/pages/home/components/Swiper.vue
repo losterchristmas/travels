@@ -34,7 +34,7 @@ export default {
           id:'001',
           src:'https://ps.ssl.qhmsg.com/sdr/400__/t01941ca4259c0a3c36.jpg'
       },{
-          id:'001',
+          id:'002',
           src:'https://ps.ssl.qhmsg.com/sdr/400__/t0186328d67c4b5c91f.jpg'
       }]
     };
