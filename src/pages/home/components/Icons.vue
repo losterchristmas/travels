@@ -98,11 +98,11 @@ export default {
       top 0
       left 0
       right 0
-      bottom 1rem
+      bottom 0
       box-sizing border-box
       padding .1rem
       .icon-img-content
-        height 100%
+        height 80%
         display block
         margin 0 auto
     .icon-text
