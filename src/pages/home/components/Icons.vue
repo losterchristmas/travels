@@ -90,7 +90,8 @@ export default {
     position relative
     width: 25%
     height 0
-    padding-bottom: 25%
+    padding-bottom: 21%
+    margin: 2% 0
     float: left
     .icon-img
       overflow hidden
@@ -102,7 +103,7 @@ export default {
       box-sizing border-box
       padding .1rem
       .icon-img-content
-        height 80%
+        height 70%
         display block
         margin 0 auto
     .icon-text
