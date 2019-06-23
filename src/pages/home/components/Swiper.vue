@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="swiperList.length">
       <!-- slides -->
       <swiper-slide v-for="item in swiperList" :key="item.id">
         <img
@@ -25,18 +25,14 @@ export default {
 //     swiper,
 //     swiperSlide
 //   },
+  props:{
+    swiperList:Array
+  },
   data() {
     return {
       swiperOption: {
           pagination:'.swiper-pagination'
       },
-      swiperList:[{
-          id:'001',
-          src:'https://ps.ssl.qhmsg.com/sdr/400__/t01941ca4259c0a3c36.jpg'
-      },{
-          id:'002',
-          src:'https://ps.ssl.qhmsg.com/sdr/400__/t0186328d67c4b5c91f.jpg'
-      }]
     };
   }
 };
