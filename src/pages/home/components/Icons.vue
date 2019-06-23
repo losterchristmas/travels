@@ -103,7 +103,11 @@ export default {
       box-sizing border-box
       padding .1rem
       .icon-img-content
+<<<<<<< HEAD
         height 70%
+=======
+        height 80%
+>>>>>>> origin/inedx-recommend
         display block
         margin 0 auto
     .icon-text
