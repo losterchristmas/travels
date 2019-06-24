@@ -2,7 +2,9 @@
   <div class="header">
       <div class="header-left"><span class="iconfont">&#xe6a4;</span></div>
       <div class="header-input"><span class="iconfont">&#xe6a2;</span>  城市/景点/游玩</div>
-      <div class="header-right"><span class="iconfont cityIcon">&#xe697;</span>{{this.city}}</div>
+      <router-link to="./City">
+        <div class="header-right"><span class="iconfont cityIcon">&#xe697;</span>{{this.city}}</div>
+      </router-link>
   </div>
 </template>
 
@@ -20,12 +22,12 @@ export default {
 
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import '~__css__/iconfont/varible.styl';
     .header
       font-size:.9rem
       display:flex
-      line-height :2.5rem
+      line-height :$headerHerght
       background:$bgColor
       color:#fff
       .header-left
@@ -41,8 +43,9 @@ export default {
         color: #888
       .header-right
         width: 4rem
-        display :flex
+        display flex
         justify-content center
+        color #fff
         .cityIcon
           font-size :1.4rem
 </style>
