@@ -3,20 +3,24 @@
       <div class="header-left"><span class="iconfont">&#xe6a4;</span></div>
       <div class="header-input"><span class="iconfont">&#xe6a2;</span>  城市/景点/游玩</div>
       <router-link to="./City">
-        <div class="header-right"><span class="iconfont cityIcon">&#xe697;</span>{{$store.state.city}}</div>
+        <div class="header-right"><span class="iconfont cityIcon">&#xe697;</span>{{city}}</div>
       </router-link>
   </div>
 </template>
 
 <script>
+import {mapState, mapGetters} from 'vuex'
 export default {
+  	computed:{
+    ...mapState(['city']),
+    // ...mapGetters(['doubleCity'])
+	},
   data () {
     return {
     }
   },
   mounted() {
     console.log(this)
-
   },
 }
 </script>

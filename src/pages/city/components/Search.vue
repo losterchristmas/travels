@@ -15,6 +15,7 @@
 </template>
 <script>
 import Bscroll from 'better-scroll'
+import {mapMutations} from 'vuex'
 export default {
   name: "CitySearch",
   props:{
@@ -57,10 +58,11 @@ export default {
     this.scroll = new Bscroll(this.$refs.search)
   },
   methods:{
-		handleCityClick(item){
-      this.$store.commit('changCity',item)
-      this.$router.push('/')
-		}
+    handleCityClick(item){
+			this.changCity(item)
+			this.$router.push('/')
+		},
+		...mapMutations(['changCity'])
 	},
 };
 </script>
