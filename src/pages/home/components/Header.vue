@@ -3,20 +3,21 @@
       <div class="header-left"><span class="iconfont">&#xe6a4;</span></div>
       <div class="header-input"><span class="iconfont">&#xe6a2;</span>  城市/景点/游玩</div>
       <router-link to="./City">
-        <div class="header-right"><span class="iconfont cityIcon">&#xe697;</span>{{this.city}}</div>
+        <div class="header-right"><span class="iconfont cityIcon">&#xe697;</span>{{$store.state.city}}</div>
       </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  props:{
-    city:String
-  },
   data () {
     return {
     }
-  }
+  },
+  mounted() {
+    console.log(this)
+
+  },
 }
 </script>
 
@@ -42,7 +43,7 @@ export default {
         line-height: 2rem
         color: #888
       .header-right
-        width: 4rem
+        padding-right .6rem
         display flex
         justify-content center
         color #fff
