@@ -13,8 +13,17 @@ export default {
 	},
 	data() {
 		return {
-			touchStatus:false
+			touchStatus:false,
+			startY:0,
+			timer:null,
 		}
+	},
+	updated() {
+		let ele;
+			for(let x in this.$refs){
+				ele = this.$refs[x][0]
+			}
+		this.startY = ele.offsetTop
 	},
 	computed:{
 		letters(){
@@ -34,16 +43,20 @@ export default {
 		},		
 		handleTouchMove(e){
 			if(this.touchStatus){
-				let ele;
-				for(let x in this.$refs){
-					ele = this.$refs[x][0]
-				}
-				const startY = ele.offsetTop
 				const touchY = e.touches[0].clientY - 79
-				const index = Math.floor((touchY-startY)/20)
-				if(index>=0&&index<=this.letters.length)
-				this.$emit('change',this.letters[index])
+				const index = Math.floor((touchY-this.startY)/20)
+				if(this.timer){
+					clearTimeout(this.timer)
+				}
+				this.timer = setTimeout(() => {
+					if(index>=0&&index<=this.letters.length)
+					this.$emit('change',this.letters[index])
+				}, 16);
+				
+				
 			}
+			
+		
 		},		
 		handleTouchEnd(){
 			this.touchStatus = false
