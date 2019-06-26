@@ -65,10 +65,10 @@ export default {
   background rgba(0,0,0, .7)
   .header-abs-back
     color #fff
-    
 .header-fixed
   height: $headerHerght
   line-height: $headerHerght
+  z-index 2
   overflow: hidden
   text-align: center
   color: #fff
