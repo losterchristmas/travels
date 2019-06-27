@@ -30,7 +30,7 @@ export default {
   methods: {
     getDetailInfo() {
       axios
-        .get("/static/mock/detail.json?",{
+        .get("../static/mock/detail.json?",{
           params:{
             id: this.$route.params.id
           }
