@@ -42,7 +42,6 @@ export default {
       }
     },
     handleLetterChange(e){
-        console.log(e)
         this.letter = e
     }
   }
